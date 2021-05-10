@@ -39,6 +39,8 @@ func main() {
 	zettelTemplate += "# " + zettelID + " " + zettelTitle
 	zettelTemplate += formatZettelTags(zettelTags) + string(NewLineChar)
 	zettelTemplate += "## Links" + string(NewLineChar)
+	zettelTemplate += "- [[]]" + string(NewLineChar)
+	zettelTemplate += "## Source" + string(NewLineChar)
 
 	zettelFileName, err := createZettelFile(zettelID, zettelTitle, zettelTemplate)
 	if err != nil {
