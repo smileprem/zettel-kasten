@@ -13,7 +13,7 @@ import (
 
 const TimeFormat = "20060102150405"
 const NewLineChar = '\n'
-const ZettelKastenLocation = "/Users/smileprem/Documents/Zettelkasten/"
+const ZettelKastenLocation = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/smileprem/zettelkasten/"
 
 func main() {
 	fmt.Println("------------------------------------------")
