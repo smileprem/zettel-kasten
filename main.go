@@ -13,7 +13,7 @@ import (
 
 const TimeFormat = "20060102150405"
 const NewLineChar = '\n'
-const ZettelKastenLocation = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/smileprem/zettelkasten/"
+const ZettelKastenLocation = "/Users/smileprem/Library/Mobile Documents/iCloud~md~obsidian/Documents/smileprem/zettelkasten/"
 
 func main() {
 	fmt.Println("------------------------------------------")
@@ -64,8 +64,8 @@ func formatZettelTags(zettelTags string) string {
 func createZettelFile(zettelID string, zettelTitle string, zettelTemplate string) (string, error) {
 	zettelFilename := ZettelKastenLocation + zettelID + "-" + strcase.ToKebab(zettelTitle) + ".md"
 	zettelFile, err := os.Create(zettelFilename)
-	defer zettelFile.Close()
 	if err != nil {
+		fmt.Println(err.Error())
 		return "", err
 	}
 	_, err = zettelFile.WriteString(zettelTemplate)
